@@ -1,0 +1,1 @@
+cmd_/home/musa/Desktop/HW1/Q1/Module.symvers := sed 's/\.ko$$/\.o/' /home/musa/Desktop/HW1/Q1/modules.order | scripts/mod/modpost -m -a  -o /home/musa/Desktop/HW1/Q1/Module.symvers -e -i Module.symvers   -T -

@@ -1,0 +1,1 @@
+cmd_/home/musa/Desktop/HW1/Q1/hello_driver.ko := ld -r  -m elf_x86_64  --build-id=sha1  -T scripts/module.lds -o /home/musa/Desktop/HW1/Q1/hello_driver.ko /home/musa/Desktop/HW1/Q1/hello_driver.o /home/musa/Desktop/HW1/Q1/hello_driver.mod.o;  true
