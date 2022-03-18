@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #define THRESHOLD 10
 
@@ -23,10 +24,23 @@ int main(){
 				case 3: pointArr[temp-1] += 2; break;
 				case 4: pointArr[temp-1] += 1; break;
 			}
-			printf("%d",pointArr[temp-1]);
 		}
 		printf("%dth person finished selection\n",(i+1));
 	}
+
+    temp = 0;
+    for(int i = 0; i < 5; i++){
+        if(pointArr[i]>THRESHOLD){
+            printf("%s:%d ",foodArr[i],pointArr[i]);
+            temp++;
+        }
+    }
+    printf("\n");
+
+    if(temp==0){
+        printf("You are eating at home/dorm today!\n");
+        exit(0);
+    }
 
 
 	return 0;
