@@ -51,6 +51,8 @@ int main(){
     }
 
 	int secondPointArr[shortCount];
+	for(int i = 0; i < shortCount; i++)
+		secondPointArr[i]=0;
 	
 	printf("\nROUND 2 STARTED\n\n");
     printf("Please make new selections in short list\n");
@@ -67,6 +69,18 @@ int main(){
 			}
 		printf("%dth person finished selection\n\n",(i+1));
 	}
+
+	int orderPoint;
+	int orderIndex;
+
+	for(int i = 0; i < shortCount; i++){
+		if(secondPointArr[i]>orderPoint){
+			orderPoint = secondPointArr[i];
+			orderIndex = i;
+		}
+	}
+
+	printf("You are eating %s today because meal has %d point which is highest.\n", shortList[orderIndex], orderPoint);
 	
 	return 0;
 }
